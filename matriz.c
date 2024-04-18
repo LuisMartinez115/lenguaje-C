@@ -86,16 +86,14 @@ switch (op)
 		{
 		fore(j,0,n1)
 		{
+
 		int r=0;
-		fore(l,0,m2)
-		{
-		fore(m,0,n1)
-		{
-		r+=a[l][m]*b[l][m];
+		fore(l,0,m2){
+		r+=a[i][l]*b[l][j];		
 		}
+		printf("%d ", r);
 		}
-		printf("%d", r);
-		}
+
 		printf("\n");
 		}
 		}
