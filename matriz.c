@@ -105,26 +105,27 @@ switch (op)
 		break;
 	case '/':
 
-		if (m1==m2 & n1==n2)
+		if (m2==n2)
 		{
+		//calcular determinante
+		
+		//fin de determinante
 		printf("la matriz resultante es \n");
-		fore (i,0,m1)
-		{
-		fore(j,0,n1)
-		{
-		printf("%d ",(a[i][j]+b[i][j]));
 		}
-		printf("\n");
-		}
-		}
-
 		else
 		{
 		printf("las matrices no son de las mismas dimensiones");
 		break;
 		}
 	case 't':
-
+		fore(i,0,m1)
+		{
+		fore(j,0,n1)
+		{
+		printf("%d",a[n1][m1]);
+		}
+		printf("\n");
+		}
 		break;
 	case 'x':
 		return 0;
