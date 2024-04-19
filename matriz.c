@@ -6,10 +6,11 @@ int main ()
 {
 char op;
 int m1,m2,n1,n2;
+     
 //recolectar matriz A
 printf("ingresa el tamaño de tu matriz A \n  ejemplo: 3 2\n");
 scanf("%d %d",&m1,&n1);
-
+                  
 int a[m1][n1];
 fore(i,0,m1)
 {
@@ -38,99 +39,101 @@ scanf(" %c",&op);
 switch (op)
 {
 	case '+':	
-	
+	   
 		if (m1==m2 && n1==n2)
 		{
-		printf("la matriz resultante es \n");
-		fore (i,0,m1)
-		{
-		fore(j,0,n1)
-		{
-		printf("%d ",(a[i][j]+b[i][j]));
-		}
-		printf("\n");
-		}
+		  printf("la matriz resultante es \n");
+		  fore (i,0,m1)
+		  {
+		    fore(j,0,n1)
+		      {
+		      printf("%d ",(a[i][j]+b[i][j]));
+		      }
+		    printf("\n");
+		  }
 		}
 
 		else
 		{
-		printf("las matrices no son de las mismas dimensiones");
+		  printf("las matrices no son de las mismas dimensiones");
 		}
 		break;
 	case '-':
 	
 		if (m1==m2 && n1==n2)
 		{
-		printf("la matriz resultante es \n");
-		fore (i,0,m1)
-		{
-		fore(j,0,n1)
-		{
-		printf("%d ",(a[i][j]-b[i][j]));
-		}
-		printf("\n");
-		}
+		  printf("la matriz resultante es \n");
+		  fore (i,0,m1)
+		  {
+		    fore(j,0,n1)
+		    {
+		      printf("%d ",(a[i][j]-b[i][j]));
+		    }
+		    printf("\n");
+		  }
 		}
 
 		else
 		{
-		printf("las matrices no son de las mismas dimensiones");
+		  printf("las matrices no son de las mismas dimensiones");
 		}
 		break;
 	case '*':
 	
 		if (n1==m2)
 		{
-		printf("la matriz resultante es \n");
-		fore (i,0,m2)
-		{
-		fore(j,0,n1)
-		{
+		  printf("la matriz resultante es \n");
+		  fore (i,0,m2)
+		  {
+		    fore(j,0,n1)
+		    {
 
-		int r=0;
-		fore(l,0,m2){
-		r+=a[i][l]*b[l][j];		
-		}
-		printf("%d ", r);
-		}
+		      int r=0;
+		      fore(l,0,m2)
+		      {
+		        r+=a[i][l]*b[l][j];		
+		      }
+		      printf("%d ", r);
+		    }
 
-		printf("\n");
-		}
+		    printf("\n");
+		  }
 		}
 
 		else
 		{
-		printf("no es posible con esas dimensiones");
+		  printf("no es posible con esas dimensiones");
 		}
 		break;
 	case '/':
 
 		if (m2==n2)
 		{
-		//calcular determinante
+		    //calcular determinante
 		
-		//fin de determinante
-		printf("la matriz resultante es \n");
+		    //fin de determinante
+		    printf("la matriz resultante es \n");
 		}
 		else
 		{
-		printf("las matrices no son de las mismas dimensiones");
+		    printf("las matrices no son de las mismas dimensiones");
 		break;
 		}
 	case 't':
-		fore(i,0,m1)
+		printf("la matriz resultante es \n");
+		fore(i,0,n1)
 		{
-		fore(j,0,n1)
-		{
-		printf("%d",a[n1][m1]);
-		}
-		printf("\n");
+		  fore(j,0,m1)
+		  {
+		    printf("%d ",a[j][i]);
+		  }
+		  printf("\n");
 		}
 		break;
 	case 'x':
 		return 0;
 	defaul:
-	printf("no es una opción correcta");
+	printf("no es una opción válida");
 		break;
 
 
